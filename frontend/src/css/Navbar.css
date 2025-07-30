@@ -1,0 +1,67 @@
+/* Main navbar container: background, spacing, layout, shadow */
+.navbar {
+  background: linear-gradient(90deg, #232526 0%, #414345 100%);
+  padding: 1.2rem 2.5rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+}
+
+
+/* Brand/logo: size, weight, color */
+.navbar-brand {
+  font-size: 2rem;
+  font-weight: bold;
+  color: #fff;
+  letter-spacing: 2px;
+  text-shadow: 1px 1px 4px #00000055;
+}
+
+/* Links container: horizontal layout, spacing */
+.navbar-links {
+  display: flex;
+  gap: 2.5rem;
+}
+
+/* Individual link: font, padding, rounded, color, transition */
+.nav-link {
+  font-size: 1.1rem;
+  padding: 0.6rem 1.3rem;
+  border-radius: 6px;
+  color: #fff;
+  text-decoration: none;
+  background: transparent;
+  transition: background 0.2s, color 0.2s;
+}
+
+/* Hover effect for links: subtle background and color change */
+.nav-link:hover, .nav-link.active {
+  background: rgba(255,255,255,0.18);
+  color:red;
+}
+
+/* Responsive adjustments for mobile screens */
+@media (max-width: 768px) {
+  .navbar {
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 1rem;
+  }
+
+  .navbar-brand {
+    font-size: 1.3rem;
+    margin-bottom: 0.5rem;
+  }
+
+  .navbar-links {
+    gap: 1rem;
+    width: 100%;
+    justify-content: flex-start;
+  }
+
+  .nav-link {
+    padding: 0.5rem 1rem;
+    font-size: 1rem;
+  }
+}

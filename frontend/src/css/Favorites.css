@@ -1,0 +1,98 @@
+
+/* Main container for the favorites page */
+.favorites {
+  padding: 2rem;
+  width: 100%;
+  box-sizing: border-box;
+  background: linear-gradient(90deg, #232526 0%, #414345 100%);
+  min-height: 80vh;
+  border-radius: 12px;
+  box-shadow: 0 4px 24px rgba(0,0,0,0.18);
+}
+
+/* Heading style for the favorites page */
+.favorites h2 {
+  margin-bottom: 2rem;
+  text-align: center;
+  font-size: 2.5rem;
+  color: #fff;
+  text-shadow: 2px 2px 8px #23252699;
+  letter-spacing: 2px;
+}
+
+/* Grid for favorite movie cards */
+.movies-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 2rem;
+  margin-top: 1rem;
+}
+
+/* Card effect for each movie */
+.movies-grid > * {
+  background: rgba(255,255,255,0.04);
+  border-radius: 10px;
+  box-shadow: 0 2px 12px rgba(0,0,0,0.12);
+  transition: transform 0.18s, box-shadow 0.18s;
+  animation: fadeIn 0.3s ease-out forwards;
+}
+
+.movies-grid > *:hover {
+  transform: translateY(-6px) scale(1.03);
+  box-shadow: 0 8px 24px rgba(229,9,20,0.13);
+}
+
+/* Empty state container when there are no favorites */
+.favorites-empty {
+  text-align: center;
+  padding: 4rem 2rem;
+  background: linear-gradient(90deg, #232526 0%, #414345 100%);
+  border-radius: 16px;
+  margin: 3rem auto 0 auto;
+  max-width: 600px;
+  box-shadow: 0 4px 24px rgba(0,0,0,0.18);
+  border: 1.5px solid #414345;
+}
+
+/* Heading for the empty state */
+.favorites-empty h2 {
+  margin-bottom: 1rem;
+  font-size: 2rem;
+  color: #e50914; /* Netflix red for accent */
+  letter-spacing: 1px;
+}
+
+/* Paragraph for the empty state */
+.favorites-empty p {
+  color: #ccc;
+  font-size: 1.2rem;
+  line-height: 1.6;
+}
+
+
+/* Animation for new favorites being added */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .favorites {
+    padding: 1rem;
+    border-radius: 8px;
+  }
+  .movies-grid {
+    gap: 1rem;
+  }
+  .favorites-empty {
+    padding: 2rem 1rem;
+    border-radius: 10px;
+  }
+}

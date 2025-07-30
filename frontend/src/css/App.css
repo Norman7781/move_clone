@@ -1,0 +1,14 @@
+/* Main content area: fills available space, adds padding, and sets layout */
+.main-content {
+  flex: 1;
+  padding: 2rem;
+  box-sizing: border-box;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  min-height: 80vh;
+  border-radius: 12px;
+  margin-top: 2rem;
+  background: linear-gradient(90deg, #232526 0%, #414345 100%);
+  box-shadow: 0 4px 24px rgba(0,0,0,0.18);
+}
